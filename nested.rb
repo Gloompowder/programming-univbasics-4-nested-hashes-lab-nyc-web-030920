@@ -15,8 +15,7 @@ def hopper
           :languages => ["C"]
         }
      }
-
-
+return programmer_hash[:grace_hopper]
 end
 
 def alan_kay_is_known_for
@@ -37,6 +36,7 @@ def alan_kay_is_known_for
           :languages => ["C"]
         }
      }
+     return programmer_hash[:alan_kay][:known_for]
 end
 
 def dennis_ritchies_language
@@ -55,13 +55,15 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
+     return programmer_hash[:dennis_ritchie][:languages].collect! { |a| a.size == 1 ? a[0] : a } 
+   end
 end
 
 def adding_matz
 # add the following information to the top level of programmer_hash
 # :yukihiro_matsumoto => {
 #   :known_for => "Ruby",
-#    :languages => ["LISP", "C"]
+#     :languages => ["LISP", "C"]
 # }
 
 	programmer_hash = 
@@ -78,8 +80,8 @@ def adding_matz
           :known_for => "Unix",
           :languages => ["C"]
         }
+        
      }
-
     
 end
 
