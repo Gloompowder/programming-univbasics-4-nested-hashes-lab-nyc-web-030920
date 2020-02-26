@@ -55,7 +55,7 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
-     return programmer_hash[:dennis_ritchie][:languages].collect! { |a| a.size == 1 ? a[0] : a } 
+     return programmer_hash[:dennis_ritchie][:languages][2]
    end
 end
 
